@@ -1,0 +1,51 @@
+\chapter{Connectivity}
+    \section{Definition}
+        \subsection{$k$-connected}
+            A graph is \textbf{$k$-connected} if:\\
+            \begin{enumerate}
+                \item $|V(G)|>k$
+                \item $G\backslash X$ is connected for all $X\subseteq V(G)$ with $|X|<k$
+            \end{enumerate}
+        \subsection{Cut edge}
+            If $G\backslash v$ has more components than $G$, then $v$ is a \textbf{cut-vertex} if $G$
+        \subsection{$k$-edge-connected}
+            $\delta_G(X)$ = set of all edges having one end in $X$ and another end in $V(G)\backslash X$
+            If $G$ is a \textbf{$k$-edge-connected} graph, then $|\delta_G(X)|\geq k \forall \emptyset \neq X \subsetneq V(G)$
+        \subsection{$2$-edge-connected}
+            \subsubsection{Lemma}
+                Let $x, y\in E(G)$\\
+                If $G$ has a cycle $D$ containing $y$ and $z$, then $G$ has a cycle containing $x$ and $z$
+            \subsubsection{Theorem}
+                Let $G$ be a connected graph with >2 vertices\\
+                The following are equivalent :\\
+                \begin{enumerate}
+                    \item $G$ is 2-connected
+                    \item If $e, f$ are non-loop edges, then $G$ has a cycle containing $e$ ad $f$
+                    \item If $v, w$ are vertices of $G$, then $G$ has a cycle containing $v$ and $w$
+                \end{enumerate}
+            \subsubsection{Property}
+                Let $e$ be an edge of a 2-connected graph $G$\\
+                Then, either $G\backslash e$pr $G/e$ is 2-connected, unless $|V(G)|=3$
+            \subsubsection{Theorem}%TODO :perhaps some thm left
+            \subsubsection{Menger's theorem}
+                $G$ gas at least $k$ disjoint paths from $S$ to $T$\\
+                $\Leftrightarrow$\\
+                $G$ has no $x\subseteq V(G)$ such that $|x|<k$ and $G\backslash x$ has no path from $s-x$ to $t-x$
+            \subsubsection{Menger's theorem corrolary}
+                Let $a, b$ be non-adjacent pair of dinstinct vertices of $G$.\\
+                $G$ has $k$ iternally distinct path from $a$ to $b$\\
+                $\Leftrightarrow$\\
+                $G$ has no set $S$, $|S|<k, S\subseteq V(G)-\{a, b\}$, such that $G\backslash S$ has no path from $a$ to $b$
+            \subsubsection{Corrolary}
+                Let $G$ be a graph with >$k$ vertices :\\
+                $G$ is $k$-connected\\
+                $\Leftrightarrow$\\
+                $\forall\text{ pairs }a,b$ of distinct vertices, $G$ has $k$ internally paths from $a$ to $b$
+        \subsection{$3$-connected}
+            \subsubsection{Theorem}
+                If $G$ is $3$-connected and $|V(G)|>4$ , then $G$ has an edge $e$ such that $G/e$ is $3$-connected
+            \subsubsection{Tutte's chain theorem}
+                Let $G$ be a simple $3$-connected graph.\\
+                Then, there exists an edge $e$ such that either $G\backslash e$ or $G/e$ is simple $3$-connected (unless $G$ is the ``Wheel'')\\
+                (The ``Wheel'' is a cycle + a vertex adjacent to every other vertex)
+                \subsubsection{Seymour's splitter theorem}
