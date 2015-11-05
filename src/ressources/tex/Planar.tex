@@ -1,0 +1,77 @@
+\chapter{Plane graphs}
+    \section{General definition}
+        \begin{description}
+            \item[Plane graph] A plane graph is a graph $(V, E)$ such that:
+                \begin{itemize}
+                    \item $V\subseteq \mathbb{R}^2$ (vertices are part of the plane)
+                    \item Every edge is an arc joining 2 vertices
+                    \item The interior of each edge contains no vertex and no interior point of other edges
+                \end{itemize}
+            \item[Planar graph] A graph is planar if it is isomorphic to a plane graph.
+            \item[Drawing] If $G$ is a surface, a drawing of a graph $G$ on $S$ is a mapping from $G$ so that vertices are mapped to distinct point of $S$, and each edge is mapped to an arc joining 2 points corresponding to the ends.\\
+            \item[Map] A drawing without any edge crossing is called a map (or an embedding).\\
+            \item[Embeddable] $G$ is ``embeddable'' on $S$ if there is \\
+        \end{description}
+    \section{Lemma}
+        If $G$ is a 2-connected loopless plane graph, then every face boundary is a cycle of $G$, and each edge is incident with exactly 2 faces.
+    \section{Euleur formula}
+        \subsection{Euleur formula}
+            If $G$ is a connected plane graph with :
+            \begin{itemize}
+                \item $v$ vertices
+                \item $e$ edges
+                \item $f$ faces
+            \end{itemize}
+            then $v-e+f=2$
+        \subsection{$\searrow$Corrolary}
+            If $G$ is a simple plane graph, then:\\
+            $|E(G)|\leq 3|V(G)|-6$, unless $|V(G)|\leq 2$
+        \subsection{$\searrow$Use example}
+            \begin{itemize}
+                \item $K_5$: $3-5-6< 10$ $\Rightarrow$ $K_5$ is nonplanar
+            \end{itemize}
+        \subsection{$\searrow$Corrolary}
+            If $G$ is a simple plane graph with no triangle (cycle of length 3), then:\\
+                $|E(G)|\leq 2|V(G)|-4$, unless $|V(G)|\leq 2$
+    \section{Kuratowski theorem and $K_5$/$K_{3, 3}$ ``things''}
+        \subsection{Kuratowski theorem}
+            A graph is planar $\Leftrightarrow$ it has a $K_5$ or $K_{3, 3}$ topological minor.
+        \subsection{$\searrow$Wagner-Kuratowski corrolary}
+            A graph is planar $\Leftrightarrow$ it has a $K_5$ or $K_{3, 3}$ minor.
+        \subsection{Convex embedding}
+            \begin{itemize}
+                \item Evey edge is mapped to a straight-line segment
+                \item Every inner face is convex
+                \item Then complement of the outer face is convex
+            \end{itemize}
+        \subsection{$\searrow$Property}
+            If $G$ is a simple 3-connected graph with no topological minor isomorphic to $K_5$ or $K_{3, 3}$, then\\
+            $G$ has a convex embedding on $\mathbb{R}^2$
+        \subsection{Lemma}
+            If $G/e$ has a $K_5$ topoligical minor, then $G$ has a $K_5$ OR $K_{3, 3}$ topoligical minor
+        \subsection{Lemma}
+        If $G/e$ has a $K_{3, 3}$ topoligical minor, then $G$ has a $K_{3, 3}$ topoligical minor
+    \section{Dual graph}
+        \subsection{Dual graph}
+            For a given plane graph $G=(V, E)$, the geometric dual $G^*$ of $G$ is a graph $H$ such that:
+            \begin{enumerate}
+                \item every face of $G$ has precisely 1 vertex of $H$
+                \item For every edge $e$ of $G$, $H$ has a unique edge $e^*$ that crosses $e$ and joins 2 vertices of $H$ that are in the faces incident with $e$, and no other edges of $H$ meet $e$
+                \item $*:E(G)\rightarrow E(G^*)$ is a bijection
+            \end{enumerate}
+        \subsection{$\searrow$Lemma}
+            If $G$ is a plane graph, then $G^*$ is connected.
+        \subsection{$\searrow$Theorem}
+            Let $G$ be a connected plane graph.\\
+            If $H$ is the geometric dual of $G$, then $G$ is the geometric dual of $H$
+        \subsection{Abstract dual}
+            $H$ is called an abstract dual of $G$ if it exists a bijection
+            \[*:E(G)\rightarrow E(H)\]
+            such that 
+            \[F\subseteq E(G)\text{ is the edge set of a cycle of }G\Leftrightarrow F^*\text{ is a minimal nonempty adjacent of }H\]
+        \subsection{$\searrow$Property}
+            If $H$ is the geometric dual of $G$, then $H$ is an abstract dual of $G$
+        \subsection{$\searrow$Theorem}
+            If $H$ is the abstract dual of $G$, then $H$ is an abstract dual of $G$
+        \subsection{Whitney theorem}
+            $G$ has an abstract dual $\Leftrightarrow$ $G$ is planar
