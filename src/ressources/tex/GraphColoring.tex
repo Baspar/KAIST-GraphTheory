@@ -1,0 +1,20 @@
+\chapter{Graph coloring}
+    \section{Definition}
+        \begin{description}
+            \item[k-coloring]: A $k$-coloring of a graph $G$ is a fonction $c:\nu(G)\rightarrow\{1, 2, \ldots, k\}$ such that $\forall$ edge $e=uv$, $c(u)\neq c(v)$
+            \item[k-colorable]: A graph $G$ is k-colorable if it has a $k$-coloring.
+            \item[$\chi$(G)]: The chromatic number $\chi(G)$ of a graph $G$ is the minimum $k$ such that $G$ has a $k$-coloring.
+            \item[Stable set]: A set $X\subseteq V(G)$ is called stable if no 2 vertices in $X$ are adjacent
+            \item[Maximum degree] Let's call $\Delta(G)=\max_{v\in V(G)}{deg_G(v)}$
+        \end{description}
+    \section{Loopfull G}
+        If $G$ contains a loop, then $G$ is NOT colorable, and $\chi(G)=\infty$
+    \section{Loopless G}
+        If $G$ is loopless, then 
+            \[\chi(G)\leq \Delta(G)+1\]
+    \section{Theorem: Colorability of planar graph}
+        Every simple planar graph is 5-colorable.
+    \section{Theorem: Brook}
+        If $G$ is simple, connected, then
+            \[\chi(G)\leq\Delta(G)\]
+        Unless $G$ is the complete graph or the odd cycle.
