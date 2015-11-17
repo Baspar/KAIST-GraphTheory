@@ -1,0 +1,15 @@
+\chapter{Nowhere-zero Flows}
+    \section{Definition}
+        \begin{description}
+            \item[Circulation] Let $D$ be a directed graph.\\
+                A circulation $\phi$ of $D$ is a function $\phi:E(D)\rightarrow \mathbb{R}$, such that for each vertex $v$ of $D$:
+                \[
+                    \sum_{e\in\delta^+(v)}\phi(e)=\sum_{e\in\delta^-(v)}\phi(e)
+                \]
+            \item[Nowhere zero $k$-flow] For a positive integer $k$, a nowhere zero $k$-flow of $D$ is a circulation $\phi$ such that:
+                \[
+                    |\phi(e)|\in \{1, 2, \ldots, k-1\}
+                \]
+        \end{description}
+    \section{Theorem}
+        Let $G$ be a plane graph. Then $G^*$(Geometric dual) is $k$-colorable $\Leftrightarrow$ $G$ has a nowhere zero $k$-flow\\
