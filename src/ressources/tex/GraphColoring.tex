@@ -1,20 +1,70 @@
 \chapter{Graph coloring}
-    \section{Definition}
-        \begin{description}
-            \item[k-coloring]: A $k$-coloring of a graph $G$ is a fonction $c:\nu(G)\rightarrow\{1, 2, \ldots, k\}$ such that $\forall$ edge $e=uv$, $c(u)\neq c(v)$
-            \item[k-colorable]: A graph $G$ is k-colorable if it has a $k$-coloring.
-            \item[$\chi$(G)]: The chromatic number $\chi(G)$ of a graph $G$ is the minimum $k$ such that $G$ has a $k$-coloring.
-            \item[Stable set]: A set $X\subseteq V(G)$ is called stable if no 2 vertices in $X$ are adjacent
-            \item[Maximum degree] Let's call $\Delta(G)=\max_{v\in V(G)}{deg_G(v)}$
-        \end{description}
-    \section{Loopfull G}
-        If $G$ contains a loop, then $G$ is NOT colorable, and $\chi(G)=\infty$
-    \section{Loopless G}
-        If $G$ is loopless, then 
-            \[\chi(G)\leq \Delta(G)+1\]
-    \section{Theorem: Colorability of planar graph}
-        Every simple planar graph is 5-colorable.
-    \section{Theorem: Brook}
-        If $G$ is simple, connected, then
-            \[\chi(G)\leq\Delta(G)\]
-        Unless $G$ is the complete graph or the odd cycle.
+    \section{Vertex coloring}
+        \subsection{Definition}
+            \begin{description}
+                \item[k-coloring]: A $k$-coloring of a graph $G$ is a fonction $c:\nu(G)\rightarrow\{1, 2, \ldots, k\}$ such that $\forall$ edge $e=uv$, $c(u)\neq c(v)$
+                \item[k-colorable]: A graph $G$ is k-colorable if it has a $k$-coloring.
+                \item[$\chi$(G)]: The chromatic number $\chi(G)$ of a graph $G$ is the minimum $k$ such that $G$ has a $k$-coloring.
+                \item[Stable set]: A set $X\subseteq V(G)$ is called stable if no 2 vertices in $X$ are adjacent
+                \item[Maximum degree] Let's call $\Delta(G)=\max_{v\in V(G)}{deg_G(v)}$
+            \end{description}
+        \subsection{Loopfull G}
+            If $G$ contains a loop, then $G$ is NOT colorable, and $\chi(G)=\infty$
+        \subsection{Loopless G}
+            If $G$ is loopless, then 
+                \[\chi(G)\leq \Delta(G)+1\]
+        \subsection{Theorem: Colorability of planar graph}
+            Every simple planar graph is 5-colorable.
+        \subsection{Theorem: Brook}
+            If $G$ is simple, connected, then
+                \[\chi(G)\leq\Delta(G)\]
+            Unless $G$ is the complete graph or the odd cycle.
+    \section{Edge coloring}
+        \subsection{Definition}
+            \begin{description}
+                \item[k-edge-coloring] of a graph G is a function $c:E(G)\rightarrow \{1, 2, \cdots, k\}$ such that $c(e)\neq c(f)$ whenever e and f share a vertex.
+                \item[k-edge-colorable] is a graph G if it has a k-edge-coloring
+                \item[$\chi$'] is the edge chromatic number/index=min k such that G has a k-edge-coloring
+            \end{description}
+        \subsection{König's theorem}
+            If $G$ is biparite, $\chi'(G)=\Delta(G)$
+        \subsection{Vizing theorem}
+            If $G$ is simple, then $\chi'(G)=\Delta(G)\text{ or }\Delta(G)+1$
+        \subsection{$\searrow$Lemma}
+            Let $G$ be a simple graph with $\Delta(G)\leq k$\\
+            Let $v$ be a vertex of $G$\\
+            Let $e_1, e_2, \cdots, e_n$ be some edges incident with $v$\\
+            Then $G$ is k-edge-colorable
+        \subsection{$\searrow$Prop}
+            Lemma$\Rightarrow$Theorem: Take $k=\Delta(G)+1$
+    \section{List coloring}
+        \subsection{Definition}
+            \begin{description}
+                \item[List assignement] of a graph $G$ is a function that match each vertex $v$ to a list $L(v)$ of color
+                \item[L-list coloring] of $G$ is a function on $V(G)$ such that$c(v)\in L(v)$ and $c(u)\neq c(v)$ whenever $u$ and $v$ are adjacent
+                \item[k-list colorable] is a graph $G$ if for all list assigments $L$, with $|L(v)[\geq k \forall \text{ vertex }v$, $G$ has a L-list coloring
+                \item[$\chi_l(G)$] = min k such that $G$ is k-list-colorable
+            \end{description}
+        \subsection{Theorem}
+                $k-list-colorable \Rightarrow k-colorable$\\
+                $k-list-colorable \not\Leftarrow k-colorable$\\
+                $\chi(G)\leq\chi_l(G)$
+        \subsection{Theorem}
+            Every simple planar graph is $5-list-colorable$
+        \subsection{Alan T~ Theorem}
+            Every bipartite planar graph is $3-list-colorable$
+        \subsection{List coloring conjecture}
+            ``List edge-chromatic index'' $\Leftrightarrow$ $\chi_l'(G)$ or ch'$(G)$
+        \subsection{Galvin's theorem}
+            Let $G$ be a simple bipartite graph. Then:
+            \[
+                \Rightarrow \chi-l'(G)=\chi'(G)
+            \]
+    \section{Perfect graphs}
+        \subsection{Definitions}
+            \begin{description}
+                \item[Clique] is a set of vertices pairwise adjacent
+                \item[$\omega(G)$] is the maximum size of a clique in $G$. We know that $\chi(G)\geq\omega(G)$
+            \end{description}
+        \subsection{Theorem Erdois}
+            For $k, l$, there is a graph $G$ such that $\chi(G)>k$ and $G$ has no cycle of length $\leq l$
