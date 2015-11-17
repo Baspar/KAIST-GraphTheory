@@ -68,3 +68,43 @@
             \end{description}
         \subsection{Theorem Erdois}
             For $k, l$, there is a graph $G$ such that $\chi(G)>k$ and $G$ has no cycle of length $\leq l$
+        \subsection{Simple graph}
+            A simple graph $G$ is perfect if:\\
+            \[
+                \chi(H)=\omega(H)
+            \]
+            For every induced subgraph $H$ of $G$
+        \subsection{Examples of perfect graph}
+            \begin{enumerate}
+                \item Bipartite graph
+                \item Complement of a bipartite graph\\
+                \item Line graph of a bipartite graph $L(G)$\\
+                    \[
+                   \left.
+                       \begin{array}{lcr}
+                            \chi(L(G))=\chi(G)&=& \Delta(G)(Konig)\\
+                            \omega(L(G)) &\geq& \Delta(G)
+                        \end{array}
+                    \right\} \Rightarrow \chi(L(G))\leq\omega(L(G))
+                \]
+                \item Complement of a line graph of a bipartite graph
+                    \[
+                   \left.
+                       \begin{array}{lcr}
+                           \chi(\overline{L(G)}) &\leq& \tau(G)\\
+                           \omega(\overline{L(G)}) &=& \nu(G)
+                        \end{array}
+                    \right\} \Rightarrow \chi(\overline{L(G)})\leq\omega(\overline{L(G)})
+                \]
+            \end{enumerate}
+        \subsection{Strong Perfect Graph Conjecture}
+            $G$ is perfect $\Leftrightarrow$ $G$ has no ``odd hole'' and no ``odd antihole''
+        \subsection{Lovàisz theorem 1}
+            If $G$ is perfect, then $\overline{G}$ is perfect.
+        \subsection{$\searrow$Lemma}
+            If $G$ is minimally imperfect, then for every stable set $U$ of $G$:
+            \[
+                \omega(G\backslash U)=\omega(G)
+            \]
+        \subsection{Lovàisz theorem 2}
+            $G$ is perfect $\Leftrightarrow$ $\alpha(H)\omega(H)\geq|V(G)|$
