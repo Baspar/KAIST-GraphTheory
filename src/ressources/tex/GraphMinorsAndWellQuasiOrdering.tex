@@ -1,0 +1,70 @@
+\chapter{Graph Minors and Well-Quasi-Ordering}
+    \section{Quasi-order}
+        A binary relation $(Q, \leq)$ is called a quasi-order if:
+        \begin{itemize}
+            \item reflexive ($a\leq a \forall a\in Q$)
+            \item transitive ($a\leq b, b\leq c \Rightarrow a\leq c$)
+        \end{itemize}
+    \section{Wall-founded quasi-order}
+        An quasi-order $(Q, \leq)$ is well-founded is $Q$ has no infinite strictly descending sequence:
+        \[
+            x_0>x_1>x_2>\cdots
+        \]
+        ($y<x \Leftrightarrow y\leq x\text{ and }x\not\leq y$)
+        \subsection{Examples}
+            \begin{itemize}
+                \item $(\mathbb{Z}, \leq)$ is not well-founded
+                \item $(\mathbb{N}, \leq)$ is well-founded
+            \end{itemize}
+    \section{Antichain}
+        $X\subseteq Q$ is called an antichain if
+        \[
+            x\not\leq  y \forall x\neq y\in X$
+        \]
+    \section{Well-quasi-order}
+        We say $(Q, \leq)$ is a well-quasi-order if:
+        \begin{itemize}
+            \item it is well-founded
+            \item it has an infinite antichain
+        \end{itemize}
+        \subsection{Example}
+            \begin{itemize}
+                \item $(\mathbb{N}, \leq)$ is W.Q.O
+                \item $(\mathbb{N}x\mathbb{N}, \leq)$ is W.Q.O
+            \end{itemize}
+    \section{Ramsey theorem (1930)}
+        Let $k$ be a positive integer.\\
+        For every $k$-edge-coloring of $K_\omega$ there exists a monochromatic infinite complete subgraph
+        \subsection{Proof}
+            Let $v_1, v_2, \cdots$  be the vertices of $K_\omega$\\
+            Let $c(v_1)$=the color appearing at $v_1$ infinitely many times.\\
+            By taking a subsequence, we may assume that all edge $vv_i(i>1)$ have color $c(v_1)$
+            Let $c(v_2)$=the color appearing at $v_2$ infinitely many times in $v_2v_3, v_2v_4, \cdots$
+            We may assume $v_2v_i(i>2)$ have the same color.
+            Repeats\\
+            We may assume the colour of $v_iv_j$ = the color of $v_iv_j=c(v_i)$
+            There is a appearing infinitely many times in $c(v_1), c(v_2), c(v_3), \cdots$
+    \section{Theorem}
+        $(\mathbb{Q}, \leq)$ is a well-ordering-order\\
+        $\Leftrightarrow$\\
+        Every infinite sequence $x_1, x_2, \cdots$ has a pair $i, j$ such thath $i<j$ and $x_i<x_j$\\
+        $\Leftrightarrow$\\
+        Every infinite sequence $x_1, x_2, \cdots$ has an infinite subsequence $x_i_1\leq x_i_2\leq \cdots$ (with $i_1<i_2<\cdots$)
+        \subsection{Proof}
+        \begin{itemize}
+            \item $3\Rightarrow 2\Rightarrow 1$ : trivial
+            \item $1\Rightarrow 3$ : suppose $x_1, x_2, \cdots$ is an infinite sequence.\\
+                We construct $K_\omega$ on $\{1, 2, \cdots\}$\\
+                The color of $ij$ is:
+                \begin{itemize}
+                    \item 1 if $x_i\leq x_j$
+                    \item 2 if $x_i> x_j$
+                    \item 3 Otherwise
+                \end{itemize}
+                By infinite Ramsey, we conclude.\\
+                Construct a W.Q.O. set, and let $(\mathbb{Q}_1, \leq_1)$ an $(\mathbb{Q}_2, \leq_2)$ be W.Q.O.
+                \begin{enumerate}
+                    \item The disjoint union $(Q_1\cap Q_2=\emptyset)$\\
+
+                \end{enumerate}
+        \end{itemize}

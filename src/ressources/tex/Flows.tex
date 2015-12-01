@@ -34,3 +34,33 @@
         $G$ has a nowhere zero $\Gamma$-flow $\Leftrightarrow$ $G$ has a 
     \section{$\searrow$Corrolarry 4 ($\Gamma$)}
         $|\Gamma_1|<|\Gamma_2|$. $G$ has a nowhere zero $\Gamma_1$-flow $\Rightarrow$ $G$ has a nowhere zero $\Gamma_2$-flow
+    %TODO: complete missing CM
+    \section{Seymour theorem}
+        Every graph with no cut-edge has a nowhere zero 6-flow.
+    \section{$\searrow$Proof}
+        We may assume that:
+        \begin{itemize}
+            \item $G$ is connected $\Rightarrow$ $G$ is 2-edge-connected.\\
+            \item $G$ is 3-edge-connected.(Cut edge size 2)
+            \item $G$ is 3-regular.
+        \end{itemize}
+        $cl(X)$=mininum set $Y$ such that $Y\subseteq X$, and there is no cycle $C$with $|E(C)-Y|=1\text{ or }2$
+        \begin{itemize}
+            \item If $E(G)=cl(X)$ then there is a $\mathbb{Z}_3$-circulation $\phi$ such that $\phi(e)\neq 0 \forall e\notin X$
+        \end{itemize}
+        \textbf{Claim:} There is a set $X$ that is the edge set of the union of disjoints cycles such that $cl(X)=E(G)$
+        Let $H$ be the largest connected subgraph of $G$ such that
+        \[
+            X\subseteq E(H)\subseteq cl(X)
+        \]
+        Choose $X$ such that $H$ is as big as possible.\\
+        We will show that $H=G$.
+        \begin{itemize}
+            \item $H$ is an induced subgraph of G:\\
+                $\Rightarrow$ $e\in cl(X)$
+                $\Rightarrow$ $E(H+e)\subseteq cl(X)$
+                $\Rightarrow$ Every vertex not in $V(H)$ has $\leq 1$ neighbor in $H$
+            \item Otherwise: $H+e+f$ works
+        \end{itemize}
+        Blablabla$\ldots$
+
