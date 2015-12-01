@@ -10,6 +10,27 @@
                 \[
                     |\phi(e)|\in \{1, 2, \ldots, k-1\}
                 \]
+            \item[Nowhere $\mathbb{Z}_k$-circulation] A $\mathbb{Z}_k$-circulation is a function $\phi:E(G)\rightarrow \mathbb{Z}_k$ such that:\\
+                \[
+                    \sum_{e\in\delta^+(e)}=\sum_{e\in\delta^-(e)}\text{ (mod k)}
+                \]
+            \item[Nowhere zero $\mathbb{Z}_k$-flow] A $\mathbb{Z}_k$-flow is a $\mathbb{Z}_k$-circulation such that $\phi(e)\neq0$ (mod k) for all edge $e$
+            \item[Nowhere $\Gamma$-circulation] A $\mathbb{Z}_k$-circulation is a function $\phi:E(G)\rightarrow \Gamma$ such that:\\
+                \[
+                    \sum_{e\in\delta^+(e)}=\sum_{e\in\delta^-(e)}\text{ (mod k)}
+                \]
+            \item[Nowhere zero $\Gamma$-flow] A $\Gamma$-flow is a $\Gamma$-circulation such that $\phi(e)\neq0$ (mod k) for all edge $e$
         \end{description}
+        (nb: $\mathbb{Z}_k = \{0, 1, \cdots, k-1\}$)
     \section{Theorem}
         Let $G$ be a plane graph. Then $G^*$(Geometric dual) is $k$-colorable $\Leftrightarrow$ $G$ has a nowhere zero $k$-flow\\
+    \section{Theorem}
+        $G$ has a nowhere zero $k$-flow $\Leftrightarrow$ $G$ ahs a nowhere zero $\mathbb{Z}_k$-flow
+    \section{$\searrow$Corrolarry 1}
+                if $k'>k$, and $g$ has a nowhere zero $k$-flow $\rightarrow$ $g$ has a nowhere zero $k'$-flow
+    \section{$\searrow$Corrolarry 2 ($\mathbb{Z}_k$)}
+        if $k'>k$, and $g$ has a nowhere zero $\mathbb{Z}_k$-flow $\rightarrow$ $g$ has a nowhere zero $\mathbb{Z}_{k'}$-flow
+    \section{$\searrow$Corrolarry 3 ($\Gamma$)}
+        $G$ has a nowhere zero $\Gamma$-flow $\Leftrightarrow$ $G$ has a 
+    \section{$\searrow$Corrolarry 4 ($\Gamma$)}
+        $|\Gamma_1|<|\Gamma_2|$. $G$ has a nowhere zero $\Gamma_1$-flow $\Rightarrow$ $G$ has a nowhere zero $\Gamma_2$-flow
